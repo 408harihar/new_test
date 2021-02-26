@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Submit</title>
+</head>
+<body>
+<h1>Submit Ticket</h1><hr>
+{% if messages %}
+<ul class="messages">
+    {% for message in messages %}
+    <li {% if message.tags %} class="{{ message.tags }}"{% endif %}>{{ message }}</li>
+    {% endfor %}
+</ul>
+{% endif %}
+<form action="/submit" method="post">
+    {% csrf_token %}
+    <input type="text" name="username" placeholder="username">
+    <br/>
+    <br/>
+    <textarea placeholder="body" name="body"></textarea>
+    <br/>
+    <br/>
+    <input type="submit" value="submit">
+</form>
+</body>
+</html>

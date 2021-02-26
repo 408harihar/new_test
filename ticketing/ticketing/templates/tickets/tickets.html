@@ -1,0 +1,15 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Tickets</title>
+</head>
+<body>
+<h1> View Tickets </h1><hr>
+<ul>
+{% for x in tickets %}
+<li>{{x.submitter}} submitted ticket on {{x.created_at}} with message {{x.body}}</li><hr>
+{% endfor %}
+</ul>
+</body>
+</html>
