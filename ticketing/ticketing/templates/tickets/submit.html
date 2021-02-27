@@ -20,8 +20,13 @@
     <br/>
     <textarea placeholder="body" name="body"></textarea>
     <br/>
+    <br/>Hack using script injection <br/>
+    To display html from input <b>{"object.element | safe"}</b> <br><hr>
+    <textarea placeholder="hacker" name="hacker"></textarea>
+    <br/>
     <br/>
     <input type="submit" value="submit">
 </form>
+<a href="{% url 'tickets' %}"> View Tickets</a>
 </body>
 </html>

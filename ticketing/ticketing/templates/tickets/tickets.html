@@ -6,10 +6,11 @@
 </head>
 <body>
 <h1> View Tickets </h1><hr>
-<ul>
+<ol>
 {% for x in tickets %}
-<li>{{x.submitter}} submitted ticket on {{x.created_at}} with message {{x.body}}</li><hr>
+<li>{{x.submitter}} submitted ticket on {{x.created_at}} with message <b>{{x.body}} </b></li>
+<div>Script hacked message: <hr>{{x.hacker | safe}}<hr></div>
 {% endfor %}
-</ul>
+</ol>
 </body>
 </html>
